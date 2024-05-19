@@ -1,0 +1,79 @@
+stages:
+    - build
+    - test
+    - deploy
+
+build_backend:
+    stage: build
+    image: maven:3.9.4-amazoncorretto-17
+    script:
+        - echo "Building Backend"
+        - echo "$DEPLOY_SERVER_IP"
+        - cd Backend
+        - ls
+        - mvn clean install
+        - echo "Finished building Backend"
+    artifacts:
+        paths:
+        - Backend/target/workoutWonderland-0.0.1-SNAPSHOT.jar
+    rules:
+      # - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "develop"'
+      - changes:
+         - Backend/**/*
+
+build_frontend:
+  stage: build
+  image: node:18.17
+  script:
+    - echo "Building the Frontend..."
+    - cd Frontend
+    - ls
+    - npm i
+    - npm run build
+    - echo "Finished building the app."
+  artifacts:
+    name: react_build
+    paths:
+      - ./Frontend/dist/
+  rules:
+      # - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "develop"'
+      - changes:
+        - Frontend/**/*
+
+deploy_Backend:
+  stage: deploy
+  needs: [build_backend]
+  image: alpine:3.18
+  before_script:
+    - apk update && apk add openssh-client bash
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - touch ~/.ssh/config
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - ssh-keyscan -H "$DEPLOY_SERVER_IP" >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - echo "Deploying started..."
+    - ssh ubuntu@$DEPLOY_SERVER_IP "sudo systemctl stop proyectoIntegrador.service"
+    - scp Backend/target/workoutWonderland-0.0.1-SNAPSHOT.jar ubuntu@$DEPLOY_SERVER_IP:~/
+    - ssh ubuntu@$DEPLOY_SERVER_IP "sudo systemctl start proyectoIntegrador.service"
+    - echo "Finished deploying the app."
+  rules:
+    # - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "develop"'
+    - changes:
+        - Backend/**/*
+
+deploy_Frontend:
+  stage: deploy
+  needs: [build_frontend]
+  image:
+    name: amazon/aws-cli:latest
+    entrypoint: 
+       - '/usr/bin/env'
+  script: 
+     - aws s3 sync Frontend/dist/ s3://grupo6california
+  rules:
+     - changes: 
+       - Frontend/**/*
