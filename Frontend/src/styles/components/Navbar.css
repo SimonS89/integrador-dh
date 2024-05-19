@@ -1,0 +1,20 @@
+.nav {
+  background-color: rgb(219, 219, 219);
+  display: flex;
+  margin-top: 125px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  height: 50px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #161515;
+  font-size: 22px;
+}
+
+.nav a:hover {
+  color: #4b47477c;
+}

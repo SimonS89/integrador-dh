@@ -1,0 +1,17 @@
+.IconsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 50px;
+}
+
+.ModalRemoved {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}

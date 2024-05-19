@@ -1,0 +1,15 @@
+export const routes = {
+  home: '/',
+  productdetail: '/product/:id',
+  admin: '/admin',
+  contact: 'contact',
+  aboutus: 'aboutus',
+  clothingcategory: 'allclothing',
+  womencategory: 'women',
+  releases: 'release',
+  adminpanel: '/admin/panel',
+  addProduct: '/admin/add-product',
+  imggalery: '/product/:id/img',
+  favoritos: 'favoritos',
+  reservation:'/reservation-confirmation',
+}

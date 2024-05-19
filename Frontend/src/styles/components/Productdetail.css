@@ -1,0 +1,27 @@
+
+
+.big-image img {
+  max-width: 100%;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.small-image {
+  flex-basis: calc(50% - 10px);
+  margin-right: 10px;
+  margin-bottom: 40px;
+  margin-top: -20px;
+}
+
+.calendario {
+  position: relative;
+  margin-top: -750px; /* Ajusta el margen superior según sea necesario */
+  margin-left: -30px;
+  
+}
+
+

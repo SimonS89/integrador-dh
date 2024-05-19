@@ -1,0 +1,51 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.panel-button {
+  background-color: #3bb047;
+  padding: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  display: block
+}
+
+.panel-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Container {
+  height: max-content ;
+  margin: 125px 50px 100px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/*//////////////////////add product//////////*/
+
+
+.from-group {
+  justify-content: center;
+  background-color: #3bb047;
+  padding: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.HomeContainer {
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+/* ListProducts */

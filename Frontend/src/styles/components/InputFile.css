@@ -1,0 +1,53 @@
+.InputFileContainer {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.EmptyImageContainer {
+  display: flex;
+  gap: 20px;
+  width: 300px;
+}
+
+.EmptyImage {
+  width: 100%;
+  min-width: 250px;
+}
+
+.ImageContainer {
+  max-width: 800px;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.IconContainer {
+  width: 100px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.TextImageContainer {
+  width: 100%;
+  min-width: 250px;
+}
+
+.IconContainer {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  object-fit: cover;
+  overflow: hidden;
+  background-color: #D9D9D9;
+}
+
+.imgIcon {
+  width: 20px;
+}

@@ -1,0 +1,18 @@
+@import './components/Card.css';
+@import './components/Footer.css';
+@import './components/Header.css';
+@import './components/Home.css';
+@import './components/Navbar.css'; 
+@import './components/Productdetail.css';
+@import './components/Login.css';
+@import './components/styles.css';
+@import './components/SearchBar.css';
+@import './components/AdminPanel.css';
+@import './components/Attribute.css';
+@import './components/Categories.css';
+@import './components/CreateProduct.css';
+@import './components/AdminListarProductos.css';
+@import './components/InputFile.css';
+@import './components/Favs.css';
+@import './components/ShareButton.css';
+@import'./components/Search.css'

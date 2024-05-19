@@ -1,0 +1,19 @@
+.search-input {
+  background-image: url("./lupa.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 20px 20px;
+  padding: 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 10px;
+}
+
+.search-input::placeholder {
+  font-size: 16px; 
+}
+@media (max-width: 768px){
+  .search-bar{
+    display: none;
+  }}

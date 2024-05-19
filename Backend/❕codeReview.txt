@@ -1,0 +1,4 @@
+Estado de la revision
+en proceso = ❕
+con dudas = ❔
+terminada = ✔

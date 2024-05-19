@@ -1,0 +1,33 @@
+.categories-container {
+    background-color: #f7f7f7; /* Cambia el color de fondo según tu preferencia */
+    
+  }
+  
+  .checkbox-container {
+    background-color: #ffffff; /* Cambia el color de fondo de la sección de categorías */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+  }
+  
+  .form-check-label {
+    margin-left: 10px; /* Añade espacio entre el checkbox y la etiqueta */
+  }
+  
+  .text-muted {
+    color: #666; /* Cambia el color de texto según tu preferencia */
+  }
+  /* Estilo para el título de la cantidad de productos y productos filtrados */
+.category-title {
+    background-color: #333; /* Cambia el color de fondo según tus preferencias */
+    color: #fff; /* Cambia el color del texto según tus preferencias */
+    padding: 5px 10px; /* Ajusta el espaciado interior según tus preferencias */
+    border-radius: 4px; /* Agrega bordes redondeados */
+    display: inline-block; /* Para que el fondo se ajuste al contenido */
+    
+  }
+
+  .input-Custom{
+    color: black
+  }
+  

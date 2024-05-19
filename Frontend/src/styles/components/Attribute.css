@@ -1,0 +1,39 @@
+.genero{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 200px;
+    
+}
+.img-genero{
+
+    width:calc(30% - 1px) ;
+    margin-right: 15px;
+}
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .feature-icon {
+    margin-right: 5px; /* Espacio entre el icono y el nombre de la característica */
+  }
+  
+  .feature-name {
+    font-weight: bold; /* Puedes aplicar estilos adicionales al nombre si lo deseas */
+  }
+  
